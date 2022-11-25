@@ -1,8 +1,3 @@
-#Lista todos os bancos cadastros
 \l
-
-#Se conecta ao banco
-\c  email_sender
-
-#Uma descricao da table
+\c email_sender
 \d emails

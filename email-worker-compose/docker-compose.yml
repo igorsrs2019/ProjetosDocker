@@ -4,11 +4,18 @@ volumes:
 services:
   db:
     image: postgres:9.6
-    volumes:
-    # Volume dos dados
-      - dados:/var/lib/postgresql/data
-    # Scripts
-      - ./scripts:/scripts  
-    
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      # Volume dos dados
+      - dados:/var/lib/postgresql/data
+      # Scripts
+      - ./scripts:/scripts
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+  frontend:
+    image: nginx:1.13
+    volumes:
+      # Site
+      - ./web:/usr/share/nginx/html/
+    ports:
+      - 80:80    
