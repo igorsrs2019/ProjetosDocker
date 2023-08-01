@@ -1,7 +1,6 @@
-Repositorio de projetos Docker
+Docker project repository
 
-Neste repositorio tem exemplos de Dockerfile para a criacao de imagens, Docker Compose para auxiliar na orquestracao de vários contêineres.<br>
-Projeto de criacao de uma arquitetura de Microservicos, API feita em python e node.
-
+In this repository there are examples of Dockerfile for creating images, Docker Compose to help orchestrate several containers.<br>
+Project to create a Microservices architecture, API made in python and node.
 
 
